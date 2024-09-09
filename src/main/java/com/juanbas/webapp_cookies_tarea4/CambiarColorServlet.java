@@ -13,6 +13,7 @@ import java.io.IOException;
 public class CambiarColorServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("req.getQueryString() = " + req.getQueryString());
         String textColor = req.getParameter("textColor");
         String backgroundColor = req.getParameter("backColor");
         System.out.println("backgroundColor = " + backgroundColor);
